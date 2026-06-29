@@ -5,7 +5,12 @@ Amanak is a fullstack digital government service platform designed to make publi
 The idea behind Amanak is simple: citizens should not have to move between offices, papers, calls, and unclear procedures to follow up on a request. The platform centralizes the experience into a clean application where users can authenticate, manage account access, view official content, and interact with service-related data through a modern API-driven architecture.
 
 ---
-
+<p align="center">
+  <a href="VIDEO_LINK_HERE">
+    <strong>▶ Watch Amanak Demo</strong>
+  </a>
+</p>
+---
 ## Project status
 
 Amanak is currently in an advanced MVP stage. The main application flow, backend services, authentication structure, database models, and content modules are implemented. The project uses mock government-style datasets for demonstration and portfolio purposes, with the architecture prepared to be connected to real institutional data sources in a production environment.
