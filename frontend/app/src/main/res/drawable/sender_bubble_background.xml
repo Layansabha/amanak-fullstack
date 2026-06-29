@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#385D94"/> <!-- Background color for the sender bubble -->
+    <corners android:radius="16dp"/> <!-- Rounded corners for the bubble -->
+</shape>

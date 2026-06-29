@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/fullback">
+    <include android:id="@+id/reportHeader" layout="@layout/report_header" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    <ScrollView android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/reportHeader" app:layout_constraintBottom_toTopOf="@id/reportFooter"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:paddingStart="17dp" android:paddingEnd="17dp" android:paddingBottom="24dp">
+            <LinearLayout android:id="@+id/selectedCrimeCard" android:layout_width="match_parent" android:layout_height="78dp"
+                android:background="@drawable/report_card_background" android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:id="@+id/cybercrimeIcon" android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="Selected type" />
+                <TextView android:id="@+id/textView50" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="12dp" android:fontFamily="@font/poppins" android:textColor="#222222" android:textSize="16sp" android:textStyle="bold" />
+                <ImageView android:id="@+id/editCrimeType" android:layout_width="38dp" android:layout_height="38dp" android:padding="7dp"
+                    android:src="@drawable/edit_2" android:contentDescription="Edit cybercrime type" />
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins" android:text="CYBERCRIMES DETAILS" android:textColor="#385D94" android:textSize="15sp" android:textStyle="bold" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/poppins" android:text="Date of cybercrime" android:textColor="#222222" android:textSize="13sp" />
+                <ImageView android:id="@+id/dateInfo" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_report_info" android:padding="2dp" android:contentDescription="Date information" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/dateOfCybercrimeSection" android:layout_width="match_parent" android:layout_height="57dp"
+                android:layout_marginTop="8dp" android:background="@drawable/report_input_background" android:clickable="true" android:focusable="true"
+                android:gravity="center_vertical" android:paddingStart="15dp" android:paddingEnd="13dp">
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/calendar" android:contentDescription="Calendar" />
+                <TextView android:id="@+id/cybercrimeDateText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="13dp" android:fontFamily="@font/poppins" android:text="Date of cybercrime" android:textColor="#A8A8AA" android:textSize="14sp" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_report_chevron" android:contentDescription="Select date" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/poppins" android:text="Relationship to the victim" android:textColor="#222222" android:textSize="13sp" />
+                <ImageView android:id="@+id/relationshipInfo" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_report_info" android:padding="2dp" android:contentDescription="Relationship information" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/relationshipSection" android:layout_width="match_parent" android:layout_height="57dp"
+                android:layout_marginTop="8dp" android:background="@drawable/report_input_background" android:clickable="true" android:focusable="true"
+                android:gravity="center_vertical" android:paddingStart="15dp" android:paddingEnd="13dp">
+                <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_relationship" android:contentDescription="Relationship" />
+                <TextView android:id="@+id/relationshipToVictimInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="13dp" android:fontFamily="@font/poppins" android:text="Relationship to the victim" android:textColor="#A8A8AA" android:textSize="14sp" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_report_chevron" android:contentDescription="Select relationship" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/poppins" android:text="Cybercrime Details" android:textColor="#222222" android:textSize="13sp" />
+                <ImageView android:id="@+id/detailsInfo" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_report_info" android:padding="2dp" android:contentDescription="Details information" />
+            </LinearLayout>
+            <EditText android:id="@+id/detailsInput" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="8dp"
+                android:background="@drawable/report_input_background" android:fontFamily="@font/poppins" android:gravity="top|start"
+                android:hint="Description" android:inputType="textMultiLine|textCapSentences" android:maxLength="2000"
+                android:padding="15dp" android:textColor="#222222" android:textColorHint="#A8A8AA" android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/reportFooter" android:layout_width="0dp" android:layout_height="82dp" android:background="@drawable/report_footer_background"
+        android:gravity="center_vertical" android:orientation="horizontal" android:paddingStart="49dp" android:paddingEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/poppins"
+            android:text="2 of 3" android:textColor="#1F2730" android:textSize="14sp" />
+        <TextView android:id="@+id/nextButton" android:layout_width="193dp" android:layout_height="51dp" android:background="@drawable/report_primary_button"
+            android:clickable="true" android:focusable="true" android:fontFamily="@font/poppins" android:gravity="center" android:text="Next" android:textColor="#FFFFFF" android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

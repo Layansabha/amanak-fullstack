@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "276874285144",
+    "project_id": "amanak-03",
+    "storage_bucket": "amanak-03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276874285144:android:6ca01b5a2619b453ff3a2d",
+        "android_client_info": {
+          "package_name": "com.example.AMANAK"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPIzWhfsqtNd9qlKRQYveaYBwMFIGXrMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276874285144:android:57397badbc5c31b4ff3a2d",
+        "android_client_info": {
+          "package_name": "com.example.AMANAKk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPIzWhfsqtNd9qlKRQYveaYBwMFIGXrMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276874285144:android:ac4e6a572eda4095ff3a2d",
+        "android_client_info": {
+          "package_name": "com.example.amanakk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPIzWhfsqtNd9qlKRQYveaYBwMFIGXrMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

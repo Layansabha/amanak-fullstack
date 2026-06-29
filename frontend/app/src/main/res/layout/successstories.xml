@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".success_stories">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:background="@drawable/success_header_background">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="4dp"
+                android:contentDescription="Back"
+                android:padding="14dp"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:id="@+id/blogsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:text="Success Stories"
+                android:textColor="#111111"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="Notifications"
+                android:padding="13dp"
+                app:srcCompat="@drawable/notification" />
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/featuredStoryCard"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="17dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/blogMainImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Featured success story"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/blog_image" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/success_story_gradient" />
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/featuredTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:maxLines="2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Ibtsam Al-Ahmad" />
+
+                    <TextView
+                        android:id="@+id/featuredSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins"
+                        android:maxLines="2"
+                        android:textColor="#F2F2F2"
+                        android:textSize="11sp"
+                        tools:text="Amanak's helping hand guided me to recovery" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/featuredCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="36dp"
+                    android:background="@drawable/label_background"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:maxLines="1"
+                    android:paddingStart="11dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="#385D94"
+                    android:textSize="11sp"
+                    tools:text="Fraud" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="17dp"
+            android:fontFamily="@font/poppins"
+            android:text="Category"
+            android:textColor="#111111"
+            android:textSize="17sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoryChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:checked="true"
+                android:fontFamily="@font/poppins"
+                android:text="All"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFraud"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Fraud"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExtortion"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Extortion"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHarassment"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Harassment"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPiracy"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Piracy"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDefamation"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Defamation"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipImpersonation"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins"
+                android:text="Impersonation"
+                android:textColor="@color/success_chip_text"
+                android:textSize="14sp"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/success_chip_background"
+                app:chipCornerRadius="20dp" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/successStoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="11dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:padding="0dp"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_success_story" />
+
+        <Button
+            android:id="@+id/loadMoreButton"
+            android:layout_width="194dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/success_load_more_background"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/poppins"
+            android:text="Load More .."
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

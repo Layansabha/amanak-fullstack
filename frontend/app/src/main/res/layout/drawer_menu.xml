@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerMenuContainer"
+    android:layout_width="330dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="#FFFFFF"
+    android:clipToPadding="false"
+    android:elevation="16dp"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="720dp"
+        android:orientation="vertical"
+        android:paddingBottom="22dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp">
+
+            <ImageView
+                android:id="@+id/drawerBackButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="7dp"
+                android:contentDescription="Close menu"
+                android:padding="14dp"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:letterSpacing="0.08"
+                android:text="AMANAK"
+                android:textColor="#385D94"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/drawerNotificationButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="7dp"
+                android:contentDescription="Notifications"
+                android:padding="13dp"
+                app:srcCompat="@drawable/notification" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/drawer_group_background"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/drawerProfile" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="My Profile" app:srcCompat="@drawable/ic_profile" />
+                <TextView style="@style/DrawerMenuText" android:text="My Profile" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerReports" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="My Reports" app:srcCompat="@drawable/ic_report" />
+                <TextView style="@style/DrawerMenuText" android:text="My Reports" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerBlogs" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Blogs" app:srcCompat="@drawable/ic_blogs" />
+                <TextView style="@style/DrawerMenuText" android:text="Blogs" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerLaws" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Laws" app:srcCompat="@drawable/ic_laws" />
+                <TextView style="@style/DrawerMenuText" android:text="Laws" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerSuccessStories" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Success Stories" app:srcCompat="@drawable/success" />
+                <TextView style="@style/DrawerMenuText" android:text="Success Stories" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerChat" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Chat" app:srcCompat="@drawable/ic_chat" />
+                <TextView style="@style/DrawerMenuText" android:text="Chat" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerSettings" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Settings" app:srcCompat="@drawable/ic_settings" />
+                <TextView style="@style/DrawerMenuText" android:text="Settings" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/poppins"
+            android:text="General"
+            android:textColor="#737373"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/drawer_group_background"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/drawerAbout" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="About" app:srcCompat="@drawable/about" />
+                <TextView style="@style/DrawerMenuText" android:text="About" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerPrivacy" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Privacy Policy" app:srcCompat="@drawable/priv" />
+                <TextView style="@style/DrawerMenuText" android:text="Privacy Policy" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerTerms" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Terms and Conditions" app:srcCompat="@drawable/priv" />
+                <TextView style="@style/DrawerMenuText" android:text="Terms and Conditions" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E1E3E7" />
+
+            <LinearLayout android:id="@+id/drawerArabic" style="@style/DrawerMenuRow">
+                <ImageView style="@style/DrawerMenuIcon" android:contentDescription="Arabic" app:srcCompat="@drawable/language" />
+                <TextView style="@style/DrawerMenuText" android:text="عربي" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/drawerLogoutButton"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:contentDescription="Logout"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/logout" />
+    </LinearLayout>
+</ScrollView>

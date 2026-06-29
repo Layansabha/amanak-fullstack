@@ -1,0 +1,54 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group>
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/my_profile"
+            android:contentDescription="@string/my_profile" />
+
+        <item
+            android:id="@+id/nav_my_reports"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/my_reports"
+            android:contentDescription="@string/my_reports" />
+
+        <item
+            android:id="@+id/nav_blogs"
+            android:icon="@drawable/ic_blogs"
+            android:title="@string/blogs"
+            android:contentDescription="@string/blogs" />
+
+        <item
+            android:id="@+id/laws"
+            android:icon="@drawable/laws"
+            android:title="@string/laws"
+            android:contentDescription="@string/laws" />
+
+        <item
+            android:id="@+id/success"
+            android:icon="@drawable/success"
+            android:title="@string/success"
+            android:contentDescription="@string/success" />
+
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/chat"
+            android:title="@string/chatttt"
+            android:contentDescription="@string/chatttt" />
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="@string/settings"
+            android:contentDescription="@string/settings" />
+
+        <item
+            android:id="@+id/language"
+            android:icon="@drawable/language"
+            android:title="@string/language"
+            android:contentDescription="@string/language" />
+    </group>
+</menu>

@@ -1,0 +1,40 @@
+
+# Secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+
+# Google / Firebase service account keys
+**/*firebase-adminsdk*.json
+**/*serviceAccount*.json
+**/*service-account*.json
+**/google-credentials*.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+
+# Backend / Java generated files
+backend/**/target/
+backend/**/bin/
+backend/**/.gradle/
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

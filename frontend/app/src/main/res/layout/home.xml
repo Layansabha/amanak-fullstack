@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/homeScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_navigation"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="28dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:background="@drawable/success_header_background">
+
+                    <ImageView
+                        android:id="@+id/homeMenuButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:contentDescription="Menu"
+                        android:padding="14dp"
+                        app:srcCompat="@drawable/menu" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins"
+                        android:letterSpacing="0.06"
+                        android:text="AMANAK"
+                        android:textColor="#385D94"
+                        android:textSize="29sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/homeNotificationButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="Notifications"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/notification" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/reportNowImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/content"
+                    android:contentDescription="Report Now">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="82dp"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Are you a cybercrime victim?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/reportButton"
+                        android:layout_width="194dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="123dp"
+                        android:background="@drawable/home_report_button_background"
+                        android:backgroundTint="#FFFFFF"
+                        android:fontFamily="@font/poppins"
+                        android:text="Report Now"
+                        android:textAllCaps="false"
+                        android:textColor="#385D94"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="Report with Confidence"
+                        android:textColor="#C6D7F0"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="17dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/blogsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:text="Blogs"
+                        android:textColor="#111111"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="View all blogs"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_blue" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/blogsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_blog" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="17dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Ask AI"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ai" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginStart="25dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:text="ASK"
+                                android:textColor="#FFFFFF"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="AI"
+                                android:textColor="#FFC401"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:layout_marginStart="7dp"
+                                android:contentDescription="AI sparkle"
+                                app:srcCompat="@drawable/star" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView53"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Chat now with our AI assistant"
+                            android:textColor="#C4C4C4"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="17dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/successStoriesLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:text="Success Stories"
+                        android:textColor="#111111"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView55"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="View all success stories"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_blue" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/successStoriesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_success_story" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="17dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lawsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:text="Laws"
+                        android:textColor="#111111"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/lawsArrow"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="View all laws"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/arrow_blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lawCardOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/home_law_card_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="14dp">
+
+                        <ImageView
+                            android:id="@+id/lawIconOne"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="Expand law"
+                            app:srcCompat="@drawable/plus1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:maxLines="2"
+                            android:text="Who are the people or establishments who commit insurance fraud?"
+                            android:textColor="#111111"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lawAnswerOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_law_answer_background"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="16dp"
+                        android:text="Any person, provider, beneficiary, or establishment that intentionally submits misleading information or conceals facts to obtain an unlawful insurance benefit."
+                        android:textColor="#516171"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lawCardTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/home_law_card_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="14dp">
+
+                        <ImageView
+                            android:id="@+id/lawIconTwo"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="Collapse law"
+                            app:srcCompat="@drawable/minus1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:maxLines="2"
+                            android:text="What are we doing to prevent fraud?"
+                            android:textColor="#516171"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lawAnswerTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_law_answer_background"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="3dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="14dp"
+                        android:text="Repair providers or any party or facility to obtain undue indemnities or benefits to him or to others through fraud and/or concealment of required documents and/or misrepresentation of information."
+                        android:textColor="#516171"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lawCardThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="17dp"
+                    android:background="@drawable/home_law_card_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="14dp">
+
+                        <ImageView
+                            android:id="@+id/lawIconThree"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="Expand law"
+                            app:srcCompat="@drawable/plus1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:maxLines="2"
+                            android:text="How can i prevent/avoid fraud?"
+                            android:textColor="#516171"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/lawAnswerThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_law_answer_background"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="3dp"
+                        android:padding="16dp"
+                        android:text="Verify identities and documents, protect account details, keep transaction records, and report suspicious requests before sharing money or personal information."
+                        android:textColor="#516171"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/discoverLawsButton"
+                    android:layout_width="194dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/home_discover_laws_background"
+                    android:backgroundTint="#3F6DA8"
+                    android:fontFamily="@font/poppins"
+                    android:text="Discover All Laws"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            style="@style/AmanakBottomNavigationStyle"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav_menu" />
+    </RelativeLayout>
+
+    <include layout="@layout/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/fullback">
+    <include android:id="@+id/reportHeader" layout="@layout/report_header" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    <ScrollView android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/reportHeader" app:layout_constraintBottom_toTopOf="@id/successActions"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="590dp" android:gravity="center_horizontal"
+            android:orientation="vertical" android:paddingStart="17dp" android:paddingEnd="17dp" android:paddingBottom="24dp">
+            <ImageView android:id="@+id/reportSuccessImage" android:layout_width="125dp" android:layout_height="125dp" android:layout_marginTop="70dp"
+                android:src="@drawable/report_success_icon" android:contentDescription="Report submitted" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:fontFamily="@font/poppins"
+                android:gravity="center" android:text="Your Report" android:textColor="#385D94" android:textSize="22sp" android:textStyle="bold" />
+            <TextView android:id="@+id/successSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins" android:gravity="center" android:text="Has been placed Successfully" android:textColor="#777777" android:textSize="16sp" />
+            <LinearLayout android:id="@+id/reportInfoSection" android:layout_width="match_parent" android:layout_height="68dp" android:layout_marginTop="42dp"
+                android:background="@drawable/report_card_background" android:clickable="true" android:focusable="true" android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:layout_width="38dp" android:layout_height="38dp" android:src="@drawable/ic_report" android:contentDescription="Report" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/poppins" android:text="Your Report No." android:textColor="#777777" android:textSize="10sp" />
+                    <TextView android:id="@+id/reportNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/poppins" android:textColor="#385D94" android:textSize="14sp" android:textStyle="bold" />
+                </LinearLayout>
+                <TextView android:id="@+id/viewReportButton" android:layout_width="112dp" android:layout_height="42dp" android:background="@drawable/report_primary_button"
+                    android:fontFamily="@font/poppins" android:gravity="center" android:text="View" android:textColor="#FFFFFF" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="38dp" android:fontFamily="@font/poppins"
+                android:gravity="center" android:lineSpacingExtra="3dp" android:text="We will review your report and get back to you\nshortly to complete the procedures."
+                android:textColor="#777777" android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/successActions" android:layout_width="0dp" android:layout_height="98dp" android:gravity="center"
+        android:orientation="horizontal" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <TextView android:id="@+id/homeButton" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight=".85"
+            android:background="@drawable/report_outline_button" android:fontFamily="@font/poppins" android:gravity="center" android:text="HOME" android:textColor="#385D94" android:textStyle="bold" />
+        <TextView android:id="@+id/exploreReportsButton" android:layout_width="0dp" android:layout_height="50dp" android:layout_marginStart="7dp" android:layout_weight="1.2"
+            android:background="@drawable/report_primary_button" android:fontFamily="@font/poppins" android:gravity="center" android:text="EXPLORE MY REPORTS" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

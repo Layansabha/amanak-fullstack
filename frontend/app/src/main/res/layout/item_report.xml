@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="104dp"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/report_icon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="Report type"
+            android:src="@drawable/report_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/report_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/report_status_icon"
+            app:layout_constraintStart_toEndOf="@id/report_icon"
+            app:layout_constraintTop_toTopOf="@id/report_icon"
+            tools:text="Impersonation report opened" />
+
+        <TextView
+            android:id="@+id/report_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:textColor="#385D94"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/report_status_icon"
+            app:layout_constraintStart_toEndOf="@id/report_icon"
+            app:layout_constraintTop_toBottomOf="@id/report_title"
+            tools:text="Impersonation" />
+
+        <ImageView
+            android:id="@+id/report_status_icon"
+            android:layout_width="72dp"
+            android:layout_height="28dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Report status"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notyet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/report_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#787878"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/report_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/report_icon"
+            tools:text="AMK-2026-0142" />
+
+        <TextView
+            android:id="@+id/report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#787878"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/report_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Updated today" />
+
+        <TextView
+            android:id="@+id/report_status_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:textColor="#385D94"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/report_id"
+            tools:text="Under Investigation" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

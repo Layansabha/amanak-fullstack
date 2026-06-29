@@ -1,0 +1,17 @@
+package com.example.amanakk.network;
+
+public class UserCheckRequest {
+    private String identifier;
+
+    public UserCheckRequest(String identifier) {
+        this.identifier = identifier;
+    }
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+}

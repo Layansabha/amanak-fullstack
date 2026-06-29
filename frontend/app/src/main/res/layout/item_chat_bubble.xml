@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/receiver_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/receiver_chat_bubble_background"
+        android:gravity="start"
+        android:maxWidth="292dp"
+        android:minHeight="40dp"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:textColor="#1F2933"
+        android:textDirection="anyRtl"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:text="Received message"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/sender_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/sender_bubble_background"
+        android:gravity="start"
+        android:maxWidth="292dp"
+        android:minHeight="40dp"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/white"
+        android:textDirection="anyRtl"
+        android:textSize="14sp"
+        tools:text="Sent message" />
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="#8A8A8A"
+        android:textDirection="locale"
+        android:textSize="11sp"
+        tools:text="11:52 AM" />
+</LinearLayout>
