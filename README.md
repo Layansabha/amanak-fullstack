@@ -247,26 +247,6 @@ Remaining improvements are mostly production-readiness tasks such as deployment,
 
 ---
 
-## Roadmap
-
-- Add Swagger / OpenAPI documentation
-- Add backend unit and integration tests
-- Add CI/CD validation workflow
-- Containerize backend services with Docker
-- Add role-based dashboards for citizens and administrators
-- Connect to real institutional datasets in a production environment
-- Add deployment documentation
-- Improve logging and monitoring for production readiness
-
----
-
-## Author
-
-**Layan Sabha**  
-Cybersecurity & DevOps
-
----
-
 ## Disclaimer
 
 Amanak is a portfolio MVP that demonstrates how a digital government services platform could be designed and implemented. It is not an official government system.
