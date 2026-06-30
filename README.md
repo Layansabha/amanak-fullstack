@@ -1,20 +1,122 @@
-# Amanak Fullstack
+<div align="center">
 
-Amanak is a fullstack digital government service platform designed to make public services easier to access, track, and trust. The project brings together a mobile-first client experience, a Spring Boot backend, secure authentication, and structured government-style data flows into one cohesive application.
+# Amanak
 
-The idea behind Amanak is simple: citizens should not have to move between offices, papers, calls, and unclear procedures to follow up on a request. The platform centralizes the experience into a clean application where users can authenticate, manage account access, view official content, and interact with service-related data through a modern API-driven architecture.
+### A mobile-first digital government services platform
 
-<p align="center">
-  <a href="https://layansabha.github.io/amanak-fullstack/">
-    <strong>▶ Watch Amanak Demo</strong>
-  </a>
-</p>
+Amanak is a fullstack MVP that reimagines how citizens access, track, and interact with government services through one clear mobile experience backed by a structured Spring Boot API.
+
+<br />
+
+<a href="https://layansabha.github.io/amanak-fullstack/"><strong>▶ Watch the Demo</strong></a>
+&nbsp;&nbsp;•&nbsp;&nbsp;
+<a href="#project-overview"><strong>Project Overview</strong></a>
+&nbsp;&nbsp;•&nbsp;&nbsp;
+<a href="#architecture"><strong>Architecture</strong></a>
+&nbsp;&nbsp;•&nbsp;&nbsp;
+<a href="#getting-started"><strong>Run Locally</strong></a>
+
+<br />
+<br />
+
+![Status](https://img.shields.io/badge/status-Advanced%20MVP-2ea44f?style=for-the-badge)
+![Type](https://img.shields.io/badge/type-Fullstack%20Project-0969da?style=for-the-badge)
+![Backend](https://img.shields.io/badge/backend-Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Frontend](https://img.shields.io/badge/frontend-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Security](https://img.shields.io/badge/security-BCrypt%20%7C%20Env%20Config-black?style=for-the-badge)
+
+</div>
 
 ---
 
-## Project status
+## Project overview
 
-Amanak is currently in an advanced MVP stage. The main application flow, backend services, authentication structure, database models, and content modules are implemented. The project uses mock government-style datasets for demonstration and portfolio purposes, with the architecture prepared to be connected to real institutional data sources in a production environment.
+Amanak was built around a simple idea: public services should feel organized, transparent, and reachable from one place.
+
+Instead of forcing users to move between offices, phone calls, paper procedures, and unclear follow-ups, Amanak centralizes the experience into a mobile application connected to backend services. The platform demonstrates how a government-facing digital service product could handle authentication, user accounts, service-related content, messages, cases, and government-style datasets through a clean fullstack architecture.
+
+This repository is structured as a **portfolio-ready monorepo** containing both the client application and the backend implementation.
+
+---
+
+## What Amanak solves
+
+| Challenge | Amanak approach |
+|---|---|
+| Fragmented service experience | One mobile-first interface for the main user flow |
+| Unclear citizen follow-up | Structured backend models for accounts, messages, posts, and cases |
+| Weak demo realism | Mock government-style data prepared for presentation and testing |
+| Security-sensitive workflows | Hashed authentication flow and environment-based configuration |
+| Hard-to-review projects | Frontend, backend, documentation, and demo are organized in one repository |
+
+---
+
+## Demo
+
+A recorded walkthrough is available through GitHub Pages:
+
+<div align="center">
+
+### [▶ Watch Amanak Demo](https://layansabha.github.io/amanak-fullstack/)
+
+</div>
+
+The demo presents the application flow, the user experience, and the core MVP features from a reviewer-friendly perspective.
+
+---
+
+## Core modules
+
+### Mobile client
+
+- Mobile-first user experience
+- Application screens and assets for the Amanak flow
+- Client-side structure prepared for backend-connected features
+- Custom authentication support module
+
+### Backend API
+
+- User registration and login flow
+- Password hashing with BCrypt
+- User account lookup and validation
+- OTP-related service layer
+- Government-style posts and announcements
+- Arabic and English content structure
+- Success stories module
+- Case and message-related data models
+- REST controllers, services, and repositories
+
+### Project delivery
+
+- Monorepo organization
+- Demo video page through GitHub Pages
+- Environment-based configuration handling
+- Mock dataset usage for safe demonstration
+
+---
+
+## Architecture
+
+```text
+Mobile App
+   │
+   ▼
+REST API Layer
+   │
+   ▼
+Spring Boot Controllers
+   │
+   ▼
+Service Layer
+   │
+   ▼
+Repository Layer
+   │
+   ▼
+Database / Mock Government-Style Dataset
+```
+
+The backend follows a layered design so request handling, business logic, and data access stay separated. This makes the project easier to extend, test, and explain during technical reviews.
 
 ---
 
@@ -22,107 +124,49 @@ Amanak is currently in an advanced MVP stage. The main application flow, backend
 
 ```text
 amanak-fullstack/
-├── frontend/              # Amanak client application
-├── backend/               # Spring Boot backend services
+├── frontend/                     # Amanak mobile client
+│   └── custom-auth-server/        # Custom authentication support
+│
+├── backend/                      # Backend workspace
+│   └── amanakk-backend/           # Spring Boot API implementation
+│
+├── docs/                         # GitHub Pages demo player
+│   ├── index.html
+│   └── assets/
+│       └── amanak-demo.mp4
+│
 ├── README.md
 └── .gitignore
 ```
-
-The repository is organized as a monorepo so the full product can be reviewed from one place: interface, backend, APIs, models, and configuration.
-
----
-
-## Core features
-
-- User registration and login flow
-- Password hashing using Spring Security and BCrypt
-- OTP-related service layer
-- Account verification and user lookup logic
-- Government-style posts and announcements
-- Arabic and English content support structure
-- Success stories module
-- Case and message-related backend models
-- REST API controllers and service-based backend design
-- Repository layer using Spring Data patterns
-- Environment-based configuration for sensitive values
-- Mock dataset integration for realistic project demonstration
 
 ---
 
 ## Tech stack
 
-### Frontend
-
-- Mobile-first application structure
-- Android Studio project workflow
-- Client-side screens and assets for the Amanak experience
-- Custom authentication support module
-
-### Backend
-
-- Java
-- Spring Boot
-- Spring Security
-- BCrypt password encoding
-- REST APIs
-- Spring Data repositories
-- Layered controller-service-repository architecture
-- Externalized configuration through environment variables
-
-### Security and configuration
-
-Sensitive values are intentionally excluded from the repository. Database passwords, Firebase credentials, and private keys should be provided through environment variables or local secret files that are not committed to Git.
-
-Example:
-
-```properties
-spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
-```
-
-For Firebase or Google service account credentials, use a local environment variable instead of committing the JSON key:
-
-```bash
-GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
-```
+| Layer | Tools / Technologies |
+|---|---|
+| Mobile client | Android Studio project workflow |
+| Backend | Java, Spring Boot |
+| Security | Spring Security, BCrypt password encoding |
+| API style | REST controllers and service-based backend design |
+| Data access | Repository pattern / Spring Data style structure |
+| Configuration | Environment-based local configuration |
+| Demo delivery | GitHub Pages |
+| Version control | Git + GitHub monorepo |
 
 ---
 
-## Backend overview
+## Security decisions
 
-The backend follows a clean layered structure:
+Security-sensitive values are intentionally kept out of the repository. The project is prepared to read local configuration from the environment instead of committing machine-specific values.
 
-```text
-Controller  ->  Service  ->  Repository  ->  Database
-```
+The repository excludes:
 
-This keeps request handling, business logic, and data access separated. It also makes the backend easier to test, extend, and maintain.
-
-Main backend responsibilities include:
-
-- Authentication and authorization configuration
-- User account management
-- Login and password validation
-- Content retrieval and publishing endpoints
-- Success story APIs
-- Case and message data handling
-- Database entity modeling
-
----
-
-## Why Amanak
-
-Amanak was built as a practical fullstack project, not just a static prototype. It focuses on a real-world problem: improving the way citizens interact with public digital services.
-
-The project demonstrates:
-
-- Product thinking
-- Backend architecture
-- Secure authentication practices
-- API design
-- Database modeling
-- Government-service workflow simulation
-- Fullstack repository organization
-- Readiness for future integration with real datasets
+- Local environment files
+- Service account files
+- Generated build outputs
+- IDE metadata
+- Runtime logs
 
 ---
 
@@ -135,48 +179,84 @@ git clone https://github.com/Layansabha/amanak-fullstack.git
 cd amanak-fullstack
 ```
 
-### Run the backend
+### Backend
 
-Go to the backend directory:
-
-```bash
-cd backend
-```
-
-Set the required environment variables, then run the Spring Boot application from your IDE or using Maven/Gradle depending on the project setup.
-
-Example environment variable:
+Go to the backend project directory:
 
 ```bash
-SPRING_DATASOURCE_PASSWORD=your_database_password
+cd backend/amanakk-backend
 ```
 
-### Run the frontend
+Set the required local environment variables for your machine, then run the Spring Boot application from your IDE or through the project build tool if configured locally.
 
-Open the `frontend` directory in Android Studio and run the application using an emulator or a connected Android device.
+### Frontend
+
+Open the frontend project in Android Studio:
+
+```text
+frontend/
+```
+
+Run it using an Android emulator or a connected Android device.
+
+### Demo page
+
+The demo player is served from:
+
+```text
+docs/index.html
+```
+
+Published page:
+
+```text
+https://layansabha.github.io/amanak-fullstack/
+```
 
 ---
 
-## Demo
+## What reviewers should notice
 
-A recorded walkthrough is available here:
+This project is not just a UI mockup. It demonstrates a complete product direction with backend implementation and security-aware configuration.
 
-[▶ Watch Amanak Demo](https://layansabha.github.io/amanak-fullstack/)
+Key points to review:
 
-The demo opens in a browser video player and shows the application flow, user experience, and core MVP features.
+- Clear separation between frontend and backend
+- Real backend models, controllers, repositories, and services
+- Authentication and password hashing practices
+- Mock government-style dataset prepared for safe presentation
+- Demo-first presentation through GitHub Pages
+- Repository structured for portfolio and technical review
 
 ---
 
-## Future improvements
+## Current status
 
-- Connect the mock dataset to real institutional data sources
-- Add role-based dashboards for citizens and administrators
-- Improve API documentation with Swagger/OpenAPI
-- Add automated backend tests
-- Add CI/CD pipeline for build validation
+Amanak is approximately **90% complete as an MVP**.
+
+Implemented and prepared:
+
+- Main user-facing flow
+- Backend service structure
+- Authentication-related classes
+- Government-style content modules
+- Demo video presentation
+- Repository documentation
+
+Remaining improvements are mostly production-readiness tasks such as deployment, automated tests, monitoring, and real institutional data integration.
+
+---
+
+## Roadmap
+
+- Add Swagger / OpenAPI documentation
+- Add backend unit and integration tests
+- Add CI/CD validation workflow
 - Containerize backend services with Docker
+- Add role-based dashboards for citizens and administrators
+- Connect to real institutional datasets in a production environment
 - Add deployment documentation
-- Improve monitoring and logging for production readiness
+- Improve logging and monitoring for production readiness
 
 ---
 
@@ -187,6 +267,6 @@ Cybersecurity & DevOps
 
 ---
 
-## Note
+## Disclaimer
 
-This repository is a portfolio-ready MVP that demonstrates how Amanak could operate as a scalable digital government services platform. It is not an official government system.
+Amanak is a portfolio MVP that demonstrates how a digital government services platform could be designed and implemented. It is not an official government system.
