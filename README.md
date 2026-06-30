@@ -5,7 +5,9 @@ Amanak is a fullstack digital government service platform designed to make publi
 The idea behind Amanak is simple: citizens should not have to move between offices, papers, calls, and unclear procedures to follow up on a request. The platform centralizes the experience into a clean application where users can authenticate, manage account access, view official content, and interact with service-related data through a modern API-driven architecture.
 
 <p align="center">
-  <strong>Demo video will be linked here after upload.</strong>
+  <a href="https://github.com/Layansabha/amanak-fullstack/releases/download/v1.0-demo/amanak.2.mp4">
+    <strong>▶ Watch Amanak Demo</strong>
+  </a>
 </p>
 
 ---
@@ -157,13 +159,11 @@ Open the `frontend` directory in Android Studio and run the application using an
 
 ## Demo
 
-Amanak has a recorded demo showing the application flow and main features. Because the video file is larger than GitHub's browser upload limit for normal repository files, it should be uploaded as a GitHub Release asset or hosted externally, then linked here.
+A recorded walkthrough is available here:
 
-Recommended link placement:
+[▶ Watch Amanak Demo](https://github.com/Layansabha/amanak-fullstack/releases/download/v1.0-demo/amanak.2.mp4)
 
-```md
-[▶ Watch Amanak Demo](PASTE_DEMO_LINK_HERE)
-```
+The demo shows the application flow, user experience, and core MVP features.
 
 ---
 
